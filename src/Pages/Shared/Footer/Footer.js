@@ -2,11 +2,11 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <Footer>
+    <div>
       <p>
-        <small>copyright &copy {new Date().getFullYear()} </small>
+        <small>copyright &copy; {new Date().getFullYear()}</small>
       </p>
-    </Footer>
+    </div>
   );
 };
 
