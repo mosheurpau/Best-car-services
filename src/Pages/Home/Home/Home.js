@@ -1,11 +1,12 @@
 import React from "react";
+import Experts from "../Experts/Experts";
 import Services from "../Services/Services";
 
 const Home = () => {
   return (
     <div>
       <Services></Services>
-      <h2>THis Services</h2>
+      <Experts></Experts>
     </div>
   );
 };
