@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const emailRef = useRef("");
@@ -54,9 +54,13 @@ const Login = () => {
       </Form>
       <p>
         New to Best Car?{" "}
-        <spen className="text-danger" onClick={navigateRegister}>
+        <Link
+          to="/register"
+          className="text-danger text-decoration-none"
+          onClick={navigateRegister}
+        >
           Please Register
-        </spen>
+        </Link>
       </p>
     </div>
   );
