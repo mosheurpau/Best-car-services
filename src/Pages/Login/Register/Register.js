@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import "./Register.css";
@@ -6,6 +6,7 @@ import auth from "../../../firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Register = () => {
+  const [agree, setAgree] = useState(false);
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
   const navigate = useNavigate();
@@ -23,8 +24,11 @@ const Register = () => {
     const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
+    // const agree = event.target.terms.checked;
 
-    createUserWithEmailAndPassword(email, password);
+    if (agree) {
+      createUserWithEmailAndPassword(email, password);
+    }
   };
 
   return (
@@ -48,9 +52,23 @@ const Register = () => {
           placeholder="Password"
           required
         />
-        <input type="checkbox" name="terms" id="terms" />
-        <label htmlFor="terms">Accept Best Car Terms and Conditions</label>
         <input
+          onClick={() => setAgree(!agree)}
+          type="checkbox"
+          name="terms"
+          id="terms"
+        />
+        {/* <label
+          className={agree ? "ps-2 text-primary" : "ps-2 text-danger"}
+          htmlFor="terms"
+        >
+          Accept Best Car Terms and Conditions
+        </label> */}
+        <label className={`ps-2 ${agree ? "" : "text-danger"}`} htmlFor="terms">
+          Accept Best Car Terms and Conditions
+        </label>
+        <input
+          disabled={!agree}
           className="w-50 mx-auto btn-primary rounded py-1 mt-2"
           type="submit"
           value="Register"
