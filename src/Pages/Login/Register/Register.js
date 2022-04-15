@@ -48,13 +48,19 @@ const Register = () => {
           placeholder="Password"
           required
         />
-        <input type="submit" value="Register" />
+        <input type="checkbox" name="terms" id="terms" />
+        <label htmlFor="terms">Accept Best Car Terms and Conditions</label>
+        <input
+          className="w-50 mx-auto btn-primary rounded py-1 mt-2"
+          type="submit"
+          value="Register"
+        />
       </form>
       <p>
         Already have an account?
         <Link
           to="/login"
-          className="text-danger pe-auto text-decoration-none ms-1"
+          className="text-primary pe-auto text-decoration-none ms-1 text-primary"
           onClick={navigateLogin}
         >
           Please Login
