@@ -1,7 +1,7 @@
 import React from "react";
-import google from "../../../images/social/google.png";
-import facebook from "../../../images/social/facebook.png";
-import github from "../../../images/social/github.png";
+import google from "../../../images/socialIcon/google.png";
+import facebook from "../../../images/socialIcon/facebook.png";
+import github from "../../../images/socialIcon/github.png";
 import {
   useSignInWithFacebook,
   useSignInWithGithub,

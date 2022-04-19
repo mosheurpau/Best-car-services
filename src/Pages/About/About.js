@@ -1,8 +1,10 @@
 import React from "react";
+import PageTitle from "../Shared/pageTitle/PageTitle";
 
 const About = () => {
   return (
     <div className="container text-center mt-5">
+      <PageTitle title="About"></PageTitle>
       <h2>This is About us</h2>
       <p>
         Hi, I'm Mosheur Rahman. I am an enthusiastic, self-motivated, reliable,
