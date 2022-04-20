@@ -1,6 +1,5 @@
 {
     "editor.fontSize": 30,
     "editor.tabSize": 4,
-    "editor.cursorStyle": "underline",
     "editor.accessibilityPageSize": 10
 }
