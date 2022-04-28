@@ -1,5 +1,5 @@
 import React from "react";
-import sleeping from "../../images/sleeping.jpg";
+import sleeping from "../../../images/sleeping.jpg";
 
 const NotFound = () => {
   return (
