@@ -4,7 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
-import useServiceDetail from "../../hooks/useServiceDetail";
+import useServiceDetail from "../../../hooks/useServiceDetail";
 
 const Checkout = () => {
   const { serviceId } = useParams();
