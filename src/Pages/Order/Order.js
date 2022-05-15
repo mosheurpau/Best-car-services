@@ -27,8 +27,8 @@ const Order = () => {
     getOrders();
   }, [user]);
   return (
-    <div className="mx-auto text-center">
-      <h2>Your Order :{orders.length}</h2>
+    <div className="w-50 mx-auto">
+      <h2>Your orders: {orders.length}</h2>
       {orders.map((order) => (
         <div key={order._id}>
           <p>
