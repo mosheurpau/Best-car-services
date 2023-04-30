@@ -37,7 +37,10 @@ const Checkout = () => {
       phone: event.target.phone.value,
     };
     axios
-      .post("https://vast-atoll-15858.herokuapp.com/order", order)
+      .post(
+        "https://best-car-services-server-production.up.railway.app/order",
+        order
+      )
       .then((response) => {
         const { data } = response;
         if (data.insertedId) {

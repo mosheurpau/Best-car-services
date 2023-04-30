@@ -4,7 +4,7 @@ const useServiceDetail = (serviceId) => {
   const [service, setService] = useState({});
 
   useEffect(() => {
-    const url = `https://vast-atoll-15858.herokuapp.com/service/${serviceId}`;
+    const url = `https://best-car-services-server-production.up.railway.app/service/${serviceId}`;
     console.log(url);
     fetch(url)
       .then((res) => res.json())

@@ -6,7 +6,7 @@ const AddService = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    const url = `https://vast-atoll-15858.herokuapp.com/service`;
+    const url = `https://best-car-services-server-production.up.railway.app/service`;
     fetch(url, {
       method: "POST",
       headers: {

@@ -9,7 +9,7 @@ const useToken = (user) => {
       const email = user?.user?.email;
       if (email) {
         const { data } = await axios.post(
-          "https://vast-atoll-15858.herokuapp.com/login",
+          "https://best-car-services-server-production.up.railway.app/login",
           { email }
         );
         setToken(data.accessToken);
